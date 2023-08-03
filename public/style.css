@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    background-color: orangered;
+}
+
+.navbar span{
+    color: white;
+    font-size: x-large;
+    padding: 10px;
+}
+
+.SideBar{
+    min-width: 200px;
+    border-right: 1px solid rgba(128,128,128,.35);
+    background-image: url(./images/rym_logo-50pcnt.svg);
+    background-position: bottom 5% left;
+    background-repeat: no-repeat;
+    background-size: 120%;
+}
+
+.SideBar .nav .nav-item .nav-link{
+    text-decoration: none;
+    color: orangered;
+}
+
+.Content{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    position: relative;
+}
+
+.ContentBody{
+    position: relative;
+    flex: 1;
+    overflow: auto;
+    height: Calc(100vh - 4.1rem);
+    width: 100%
+}
+
+.ContentPage{
+    padding: 1rem;
+    padding-bottom: 0;
+    width: 100%;
+    height: Calc(100vh - 4.1rem);
+    overflow: auto
+}
+
+.ContentPage .d-flex span{
+    font-size: x-large;
+}
+
+.cards{
+    display: grid;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.cards .card{
+    padding: 10px;
+    border: 1px solid orangered;
+}
+
+.cards .card img{
+    width: 200px;
+    height: 200px;
+    filter: grayscale(100%);
+    transition: all 1s;
+}
+
+.cards .card img:hover{
+    filter: grayscale(0%);
+    cursor: pointer;
+}
+
+.cards .card .card-body{
+    padding: 10px 10px 0 10px;
+}
+
+.cards .card .card-body .card-title{
+    font-weight: 600;
+    color: orangered;
+}
+
+.cards .card .card-body .card-text{
+    margin: 0;
+    font-weight: 800;
+}
+
+.modal-body .imagen{
+    border: 1px solid black;
+}
+
+.segunda div{
+    margin-left: 40px;
+}
+
+.editar{
+    margin: 20px auto;
+    width: 700px;
+    border: 1px solid orangered;
+    border-radius: 5%;
+    padding: 20px;
+}
+
+.botones button{
+    margin: 10px 10px 10px 0;
+}
+
+.foto_edit{
+    height: 257px;
+}
