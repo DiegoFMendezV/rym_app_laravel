@@ -1,6 +1,8 @@
 @extends('base')
 
 @section('content')
+<br>
+    <h2 style="text-align: center">Editar Personaje</h2>
     <div class="editar">
         <form action="{{ route('personajes_update', ['id' => $character->id]) }}" method="POST">
             @method('PATCH')
@@ -16,7 +18,7 @@
                     <div class="mb-3">
                         <label for="foto" class="form-label">Imagen</label>
                         <img class="foto_edit form-control" src="{{ $character->image }}" alt="">
-                        <input type="text" class="form-control" name="image" id="foto" placeholder="Escribe la url de la imagen">
+                        <input type="text" class="form-control" name="image" id="foto" value="{{ $character->image }} placeholder="Escribe la url de la imagen">
                     </div>
                     <div class="mb-3">
                         <label for="name" class="form-label">Nombre</label>
@@ -62,20 +64,18 @@
                     </div>
                 </div>  
             </div>
-            <div class="d-flex">
-                <div class="botones">
-                    <a href="{{ route('personajes')}}"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atras</button></a>
-                    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
-                
-                    <form action="{{ route('personajes_destroy', ['id' => $character->id]) }}" method="POST">
-                        @method('DELETE')
-                        @csrf
-                        <button type="submit" class="btn btn-danger">Eliminar</button>
-                    </form>
-                </div>
-            </div>  
-               
-        </form>
-        
+            
+            <div class="botones">
+                <a href="{{ route('personajes')}}"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Atras</button></a>
+                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+            </div>
+        </form>  
+            <div>
+                <form action="{{ route('personajes_destroy', ['id' => $character->id]) }}" method="POST">
+                    @method('DELETE')
+                    @csrf
+                    <button type="submit" class="btn btn-danger">Eliminar</button>
+                </form>
+            </div>               
     </div>
 @endsection

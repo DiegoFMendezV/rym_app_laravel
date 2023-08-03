@@ -121,9 +121,9 @@
                     </div>    
                 </div>
                 <br>
-                <div class="d-flex justify-content-center">
+                {{-- <div class="d-flex justify-content-center">
                     {!! $characters->links() !!}
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

@@ -14,7 +14,7 @@ class CharactersController extends Controller
      */
     public function index() 
     {
-        $characters = Characters::paginate(10);
+        $characters = Characters::All();
         // log:info("$characters");
         return view('personajes', compact ('characters'));
     }
@@ -25,6 +25,7 @@ class CharactersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create(Request $request){
+        
         $request->validate([
             'name' => "required",
             'status' => "required",
